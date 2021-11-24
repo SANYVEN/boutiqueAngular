@@ -1,0 +1,38 @@
+<div class="jumbotron text-center" style="margin-bottom:0">
+  <h1>My First Bootstrap 4 Page</h1>
+  <p>Resize this responsive page to see the effect!</p> 
+</div>
+<meta charset="UTF-8">
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+  <!-- Brand -->
+  <a class="navbar-brand" href="#">INICIO</a>
+  <!-- Links -->
+  <ul class="navbar-nav">
+    <!-- Dropdown -->
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+        CLIENTES
+      </a>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" [routerLink]="['/clientes']">Listar</a>
+        <a class="dropdown-item" [routerLink]="['/crearCle']">Crear</a>
+        <a class="dropdown-item" href="#">Consultar</a>
+      </div>
+    </li>
+
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+        EMPLEADOS
+      </a>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" [routerLink]="['/empleados']">Listar</a>
+        <a class="dropdown-item" [routerLink]="['/crearEmp']">Crear</a>
+        <a class="dropdown-item" href="#">Consultar</a>
+      </div>
+    </li>
+  </ul>
+</nav>
+
+<div class="container">
+      <router-outlet></router-outlet>
+</div>

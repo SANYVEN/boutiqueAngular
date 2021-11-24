@@ -1,0 +1,35 @@
+<h1 class="text-center">LISTA DE EMPLEADOS </h1>
+<table class="table table-striped table-bordered table-hover display" id="idEmpleados">
+    <thead>
+        <tr>
+            <th>IDDENTIFICACIÓN</th>
+            <th>NOMBRES</th>
+            <th>APELLIDOS</th>
+            <th>ÁREA</th>
+            <th>CARGO</th>
+            <th>FECHA CONTRATO</th>
+            <th>PERMISOS</th>
+            <th>OPCIONES</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let c of infoConsultaEmp">
+            <td>{{c.identificacionEmp}}</td>
+            <td>{{c.nombresEmp}}</td>
+            <td>{{c.apellidosEmp}}</td>
+            <td>{{c.areaEmp}}</td>
+            <td>{{c.cargoEmp}}</td>
+            <td>{{c.fechaContratoEmp}}</td>
+            <td>{{c.permisosEmp}}</td>
+
+            <td>
+                <button (click)="formEditarEmp(c.identificacionEmp)" class="btn btn-warning">EDITAR</button>
+                <button (click)="eliminarEmp(c.identificacionEmp)" class="btn btn-danger">ELIMINAR</button>
+                <button class="btn btn-dark">VER</button>
+            </td>
+
+        </tr>
+    </tbody>
+
+</table>

@@ -1,0 +1,50 @@
+<br>
+<h1 class="text-center">REGISTRAR INFORMACIÓN DE CLIENTES </h1>
+<hr>
+<form (submit)="guardarCle()" ngNativeValidate class="was-validated text-center">
+    <div class="row form-group">
+        <div class="col-xl-3" style="background-color:lavender;">
+            <label for="iden">IDENTIFICACIÓN:</label> 
+            <input required type="number" class="form-control" [(ngModel)]="crearCle.identificacionCle" placeholder="IDENTIFICACIÓN" name="iden" required>
+        </div>
+        <div class="col-xl" style="background-color:lavenderblush;">
+            <label for="nom">NOMBRES:</label> 
+            <input required type="text" [(ngModel)]="crearCle.nombresCle" placeholder="NOMBRES" class="form-control" name="nom" required>
+        </div>
+        <div class="col-xl" style="background-color:lavender;">
+            <label for="ape">APELLIDOS:</label>
+            <input required type="text" [(ngModel)]="crearCle.apellidosCle" placeholder="APELLIDOS" class="form-control" name="ape" required>
+        </div>
+    </div>
+
+    <div class="row form-group">
+        <div class="col-xl-3" style="background-color:lavender;">
+            <label for="cel">CELULAR:</label>
+            <input required type="number" [(ngModel)]="crearCle.celularCle" placeholder="CELULAR" class="form-control" name="cel" required>
+        </div>
+        <div class="col-xl" style="background-color:lavenderblush;">
+            <label for="dir">DIRECCIÓN:</label>
+            <input required type="text" [(ngModel)]="crearCle.direccionCle" placeholder="DIRECCIÓN" class="form-control" name="dir" required>
+        </div>
+        <div class="col-xl-3" style="background-color:lavender;">
+            <label for="fec">FECHA REGISTRO:</label>
+            <input required type="date" [(ngModel)]="crearCle.fechaRegistroCle" placeholder="FECHA REGISTRO" class="form-control" name="fec" required>
+        </div>
+    </div>
+
+    <div class="row form-group">
+        <div class="col-xl" style="background-color:lavender;">
+            <label for="cor">CORREO:</label>
+            <input required type="email" [(ngModel)]="crearCle.emailCle" placeholder="CORREO" class="form-control" name="cor" required>
+        </div>
+        <div class="col-xl-3" style="background-color:lavenderblush;">
+            <label for="con">CONTRASEÑA:</label>
+            <input required type="password" [(ngModel)]="crearCle.contrasenaCle" placeholder="CONTRASEÑA" class="form-control" name="con" required> 
+        </div>
+    </div>
+
+    <hr>
+    <Button type="submit" class="btn btn-success">GUARDAR</Button>
+    <Button type="reset" class="btn btn-secondary">LIMPIAR</Button>
+</form>
+

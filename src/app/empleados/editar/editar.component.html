@@ -1,0 +1,109 @@
+<br>
+<h1 class="text-center">ACTUALIZAR INFORMACIÓN DE EMPLEADOS </h1>
+<hr>
+<form (submit)="actualizarEmp()" ngNativeValidate class="was-validated text-center">
+    <div class="row form-group">
+        <div class="col-xl-3" style="background-color:lavender;">
+            <label for="iden">IDENTIFICACIÓN:</label>
+            <input required type="number" class="form-control" [(ngModel)]="crearEmp.identificacionEmp"
+                placeholder="IDENTIFICACIÓN" name="iden" required>
+        </div>
+        <div class="col-xl" style="background-color:lavenderblush;">
+            <label for="nom">NOMBRES:</label>
+            <input required type="text" [(ngModel)]="crearEmp.nombresEmp" placeholder="NOMBRES" class="form-control"
+                name="nom" required>
+        </div>
+        <div class="col-xl" style="background-color:lavender;">
+            <label for="ape">APELLIDOS:</label>
+            <input required type="text" [(ngModel)]="crearEmp.apellidosEmp" placeholder="APELLIDOS" class="form-control"
+                name="ape" required>
+        </div>
+    </div>
+
+    <div class="row form-group">
+        <div class="col-xl-3" style="background-color:lavender;">
+            <label for="cel">CELULAR:</label>
+            <input required type="number" [(ngModel)]="crearEmp.celularEmp" placeholder="CELULAR" class="form-control"
+                name="cel" required>
+        </div>
+        <div class="col-xl" style="background-color:lavenderblush;">
+            <label for="dir">DIRECCIÓN:</label>
+            <input required type="text" [(ngModel)]="crearEmp.direccionEmp" placeholder="DIRECCIÓN" class="form-control"
+                name="dir" required>
+        </div>
+        <div class="col-xl-3" style="background-color:lavender;">
+            <label for="fecN">FECHA NACIMIENTO:</label>
+            <input required type="date" [(ngModel)]="crearEmp.fechaNacimientoEmp" placeholder="FECHA NACIMIENTO"
+                class="form-control" name="fecN" required>
+        </div>
+    </div>
+
+    <div class="row form-group">
+        <div class="col-xl" style="background-color:lavender;">
+            <label for="cor">CORREO:</label>
+            <input required type="email" [(ngModel)]="crearEmp.emailEmp" placeholder="CORREO" class="form-control"
+                name="cor" required>
+        </div>
+        <div class="col-xl-3" style="background-color:lavenderblush;">
+            <label for="fecC">FECHA CONTRATO:</label>
+            <input required type="date" [(ngModel)]="crearEmp.fechaContratoEmp" placeholder="FECHA CONTRATO"
+                class="form-control" name="fecC" required>
+        </div>
+        <div class="col-xl-3" style="background-color:lavender;">
+            <label for="con">CONTRASEÑA:</label>
+            <input required type="password" [(ngModel)]="crearEmp.contrasenaEmp" placeholder="CONTRASEÑA"
+                class="form-control" name="con" required>
+        </div>
+    </div>
+
+    <div class="row form-group">
+        <div class="col-xl-3" style="background-color:lavender;">
+            <label for="are">ÁREA:</label>
+            <select required type="text" [(ngModel)]="crearEmp.areaEmp" placeholder="ÁREA" class="form-control"
+                name="are" required>
+                <option>JEFATURA</option>
+                <option>RECURSOS HUMANOS</option>
+                <option>OPERACIONES</option>
+                <option>TESORERIA</option>
+                <option>ADMINISTRACION</option>
+            </select>
+        </div>
+        <div class="col-xl-3" style="background-color:lavenderblush;">
+            <label for="car">CARGO:</label>
+            <select required type="text" [(ngModel)]="crearEmp.cargoEmp" placeholder="CARGO" class="form-control"
+                name="car" required>
+                <option>DIRECTOR</option>
+                <option>COORDINADOR</option>
+                <option>OPERARIO</option>
+                <option>ADMINISTRADOR</option>
+                <option>SECRETARIO</option>
+                <option>ASISTENTE</option>
+            </select>
+        </div>
+        <div class="col-xl-3" style="background-color:lavender;">
+            <label for="numC">NÚMERO CONTRATO:</label>
+            <input required type="text" [(ngModel)]="crearEmp.numeroContratoEmp" placeholder="NÚMERO CONTRATO"
+                class="form-control" name="numC" required>
+        </div>
+        <div class="col-xl-3" style="background-color:lavenderblush;">
+            <label for="per">PERMISOS:</label>
+            <select required type="text" [(ngModel)]="crearEmp.permisosEmp" placeholder="PERMISOS" class="form-control"
+                name="per" required>
+                <option>ADMINISTRADOR</option>
+                <option>USUARIO</option>
+                <option>SUPERVISOR</option>
+                <option>VENTAS</option>
+                <option>PRODUCTOS</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="row form-group" style="background-color:lavender;">
+        <label for="anot">ANOTACIONES:</label>
+        <textarea required class="form-control" rows="5" [(ngModel)]="crearEmp.anotacionesEmp" placeholder="ANOTACIONES"
+            name="anot" required></textarea>
+    </div>
+
+    <hr>
+    <Button type="submit" class="btn btn-primary">ACTUALIZAR</Button>
+</form>
